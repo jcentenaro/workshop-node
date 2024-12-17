@@ -9,6 +9,8 @@ app.set("views", "./src/views");
 // LE DIGO QUE UTILICE LAYOUTS Y EN DONDE
 app.use(expressLayouts);
 app.set("layout", "layouts/layout")
+//USA EXPRESS PARA TOMAR LOS DADTOS DEL FORMULARIO
+app.use(express.urlencoded({ extended: false}));
 // DEFINO EL ROUTE QUE MANEJARÁ ESTE INDEX
 app.use(require("./src/routes/mainRoutes"));
 
